@@ -1,0 +1,31 @@
+environment: development
+
+mongoConfiguration:
+  dbName: sampledb
+  host: localhost
+  port: 27017
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8082
+  minThreads: 100
+  requestLog:
+    timeZone: UTC
+  requestLog:
+    timeZone: UTC
+    appenders:
+      - type: file
+        currentLogFilename: logs/hp-requests.log
+        threshold: ALL
+        archive: true
+        archivedLogFilenamePattern: logs/hp-requests-%d.log.gz
+        archivedFileCount: 20
+        timeZone: UTC
+      - type: console
+        threshold: ERROR
+        timeZone: UTC
+        target: stdout
+
+swagger:
+  resourcePackage: resources.management.service.resources

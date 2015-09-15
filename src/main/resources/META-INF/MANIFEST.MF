@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: ResourceManagementService
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: resource.management.service
+Built-By: abhay.girnara
+Created-By: Apache Maven
+Main-Class: resource.management.service.ResourceManagementApplication
+Archiver-Version: Plexus Archiver
