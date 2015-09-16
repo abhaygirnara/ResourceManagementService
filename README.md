@@ -1,4 +1,4 @@
-Hub Planner
+Planner
 ===========
 
 - Add introduction here </br>
