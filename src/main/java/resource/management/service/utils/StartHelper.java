@@ -23,7 +23,7 @@ public class StartHelper {
     }
 
     public static ResourceManagementConfiguration createConfiguration(String configFilename) {
-        ConfigurationFactory<ResourceManagementConfiguration> factory = new ConfigurationFactory<>(
+        ConfigurationFactory<ResourceManagementConfiguration> factory = new ConfigurationFactory<ResourceManagementConfiguration>(
                 ResourceManagementConfiguration.class,
                 Validation.buildDefaultValidatorFactory().getValidator(),
                 Jackson.newObjectMapper(),

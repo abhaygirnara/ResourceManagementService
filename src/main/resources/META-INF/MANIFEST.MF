@@ -4,5 +4,5 @@ Implementation-Version: 1.0-SNAPSHOT
 Implementation-Vendor-Id: resource.management.service
 Built-By: abhay.girnara
 Created-By: Apache Maven
-Main-Class: resource.management.service.ResourceManagementApplication
+Main-Class: resource.management.service.ResourceManagementService
 Archiver-Version: Plexus Archiver

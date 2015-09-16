@@ -16,7 +16,7 @@ import resource.management.service.utils.StartHelper;
 import com.hubspot.dropwizard.guice.GuiceBundle;
 import com.mongodb.MongoClient;
 
-public class ResourceManagementApplication extends Application<ResourceManagementConfiguration> {
+public class ResourceManagementService extends Application<ResourceManagementConfiguration> {
 
     private GuiceBundle<ResourceManagementConfiguration> guiceBundle;
 
@@ -25,7 +25,7 @@ public class ResourceManagementApplication extends Application<ResourceManagemen
             arguments = new String[] { "server", "src/main/resources/config.yml" };
         }
         StartHelper.setFileConfigDetails(arguments);
-        new ResourceManagementApplication().run(arguments);
+        new ResourceManagementService().run(arguments);
     }
 
     @Override
