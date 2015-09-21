@@ -1,7 +1,9 @@
-package resource.management.service.model;
+package resource.management.service.document;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.Gson;
 
+import org.mongojack.ObjectId;
 import resource.management.service.utils.Constants;
 import resource.management.service.utils.Constants.STORAGE_BEAN_STATUS;
 import resource.management.service.utils.Constants.STORAGE_BEAN_TYPE;
@@ -18,10 +20,15 @@ public class StorageBean {
     private int maxWeight;
     private int priority;
 
+
+    @ObjectId
+    @JsonProperty("_id")
     public String getId() {
         return id;
     }
 
+    @ObjectId
+    @JsonProperty("_id")
     public void setId(String id) {
         this.id = id;
     }

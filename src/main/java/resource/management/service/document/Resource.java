@@ -1,13 +1,17 @@
-package resource.management.service.model;
+package resource.management.service.document;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.Gson;
 
+import org.mongojack.ObjectId;
 import resource.management.service.utils.Constants;
 import resource.management.service.utils.Constants.PROCESS_TYPE;
 import resource.management.service.utils.Constants.RESOURCE_TYPE;
 import resource.management.service.utils.Constants.STATUS;
 
-public class Resource {
+import java.io.Serializable;
+
+public class Resource implements Serializable {
     private static final Gson GSON = new Gson();
     private String id;
     private String name;
@@ -18,10 +22,14 @@ public class Resource {
     private int priority;
     private String providerId;
 
+    @ObjectId
+    @JsonProperty("_id")
     public String getId() {
         return id;
     }
 
+    @ObjectId
+    @JsonProperty("_id")
     public void setId(String id) {
         this.id = id;
     }

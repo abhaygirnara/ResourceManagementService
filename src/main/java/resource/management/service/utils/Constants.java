@@ -1,6 +1,8 @@
 package resource.management.service.utils;
 
-public class Constants {
+import java.io.Serializable;
+
+public class Constants implements Serializable {
 
     public enum STATUS {
         ACTIVE, INACTIVE, AVAILABLE;
@@ -32,6 +34,15 @@ public class Constants {
 
     public enum HUB_TYPE {
         FCMOTHERHUB, MPMOTHERHUB, PICKUPHUB, DELIVERYHUB;
+    }
+
+    public enum SERVICE_ADAPTER_TYPE{
+        HUB,
+        RESOURCE,
+        PROVIDER,
+        PROCESSING_AREA,
+        STORAGE_BEAN,
+        USER
     }
 
 }

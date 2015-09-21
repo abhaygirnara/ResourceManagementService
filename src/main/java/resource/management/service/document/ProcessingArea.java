@@ -1,15 +1,17 @@
-package resource.management.service.model;
+package resource.management.service.document;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.Gson;
 
-import resource.management.service.utils.Constants;
+import org.mongojack.ObjectId;
 import resource.management.service.utils.Constants.PROCESS_TYPE;
 import resource.management.service.utils.Constants.STATUS;
 
 public class ProcessingArea {
     private static final Gson GSON = new Gson();
+    private String id;
     private List<Resource> resources;
     private List<StorageBean> storageBeans;
     private PROCESS_TYPE processType;
@@ -17,6 +19,19 @@ public class ProcessingArea {
     private int priority;
     private String configId;
     private STATUS status;
+
+
+    @ObjectId
+    @JsonProperty("_id")
+    public String getId() {
+        return id;
+    }
+
+    @ObjectId
+    @JsonProperty("_id")
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public List<Resource> getResources() {
         return resources;

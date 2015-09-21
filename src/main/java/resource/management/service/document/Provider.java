@@ -1,7 +1,9 @@
-package resource.management.service.model;
+package resource.management.service.document;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.Gson;
 
+import org.mongojack.ObjectId;
 import resource.management.service.utils.Constants;
 import resource.management.service.utils.Constants.PROVIDER_TYPE;
 
@@ -13,11 +15,15 @@ public class Provider {
     private String data;
     private String instalationId;
 
+    @ObjectId
+    @JsonProperty("_id")
     public String getId() {
 
         return id;
     }
 
+    @ObjectId
+    @JsonProperty("_id")
     public void setId(String id) {
         this.id = id;
     }

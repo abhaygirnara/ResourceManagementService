@@ -6,7 +6,7 @@ import org.mongojack.ObjectId;
 /**
  * This class is a Representation of the most basic parts of a Mongodb document.
  */
-public class MongoDocument {
+public class User {
 
     private String id;
     private String name;

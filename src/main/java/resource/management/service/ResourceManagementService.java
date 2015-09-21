@@ -10,7 +10,8 @@ import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 import resource.management.service.configurations.ResourceManagementConfiguration;
 import resource.management.service.health.MongoHealthCheck;
 import resource.management.service.modules.GuiceConfigurationModule;
-import resource.management.service.resources.CollectionIdsResource;
+import resource.management.service.resources.ResourcesResource;
+import resource.management.service.resources.UserResource;
 import resource.management.service.utils.StartHelper;
 
 import com.hubspot.dropwizard.guice.GuiceBundle;
@@ -56,7 +57,8 @@ public class ResourceManagementService extends Application<ResourceManagementCon
         final MongoClient mongoClient = new MongoClient(configuration.getMongoConfiguration().getHost(),
                 configuration.getMongoConfiguration().getPort());
         environment.healthChecks().register("mongo", new MongoHealthCheck(mongoClient));
-        environment.jersey().register(CollectionIdsResource.class);
+        environment.jersey().register(UserResource.class);
+        environment.jersey().register(ResourcesResource.class);
         environment.jersey().register(MultiPartFeature.class);
     }
 
