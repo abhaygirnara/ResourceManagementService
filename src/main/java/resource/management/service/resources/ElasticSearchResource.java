@@ -41,9 +41,10 @@ public class ElasticSearchResource {
         }
 
         try {
+            LOG.info("Pushing data: " +json +" of type: "+type + " into elastic cluster");
             return elasticSearchAdapter.pushData(json, type);
         } catch (Exception e) {
-            LOG.error("Error while pushing data to elastic cluster : " + "", e);
+            LOG.error("Error while pushing data json : " + json +" type: " + type+"to elastic cluster : " + "", e);
             return Response.status(ErrorResponse.ErrorCode.INTERNAL_ERROR.getStatus()).entity(
                 new ErrorResponse(ErrorResponse.ErrorCode.INTERNAL_ERROR.getMessage()).toJson())
                 .type(MediaType.APPLICATION_JSON).build();

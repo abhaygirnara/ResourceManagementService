@@ -29,7 +29,7 @@ public class ElasticSearchAdapterImpl implements ElasticSearchAdapter {
     private static final String BAG_INDEX_TYPE = "bag_type";
     private static final String TASK_INDEX = "task";
     private static final String TASK_INDEX_TYPE = "task_type";
-    private static final String DATE_FORMAT = "dd-MM-yyyy HH:mm:ss";
+    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
     private static final Gson GSON = new Gson();
     private static final Logger LOG = LoggerFactory.getLogger(ElasticSearchAdapterImpl.class);
 
