@@ -1,9 +1,9 @@
 environment: development
 
-mongoConfiguration:
-  dbName: sampledb
+elasticConfiguration:
+  clusterName: elasticsearch
   host: localhost
-  port: 27017
+  port: 9300
 
 server:
   applicationConnectors:
