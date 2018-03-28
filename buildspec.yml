@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - mvn clean apckage
+      - mvn clean package
       - ls -lha target/
 artifacts:
   files:
