@@ -1,11 +1,11 @@
 version: 0.2
 
 phases:
-  post_build:
+  install:
     commands:
-      - echo Build completed on `date`
       - mvn clean apckage
+      - ls -lha target/
 artifacts:
   files:
-    - target/my-web-app.war
+    - target/ResourceManagementService.jar
   discard-paths: yes
