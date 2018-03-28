@@ -7,5 +7,6 @@ phases:
       - ls -lha target/
 artifacts:
   files:
+    - appspec.yml
     - target/ResourceManagementService.jar
   discard-paths: yes
