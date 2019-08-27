@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - mvn clean package
+      - ls -lha target/
+artifacts:
+  files:
+    - appspec.yml
+    - target/ResourceManagementService.jar
+  discard-paths: yes
